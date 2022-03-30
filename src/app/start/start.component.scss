@@ -1,0 +1,117 @@
+#start {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  .top {
+    flex: 1;
+    display: flex;
+    .left {
+      cursor: pointer;
+      flex: 1;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../assets/wallpaper-2.jpg");
+      background-position: center center;
+      background-size: cover;
+
+      &:hover {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+          url("../../assets/wallpaper-2.jpg");
+        background-position: center center;
+        background-size: cover;
+      }
+    }
+
+    .right {
+      cursor: pointer;
+      flex: 1;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../assets/wallpaper-3.jpg");
+      background-position: center center;
+      background-size: cover;
+
+      &:hover {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+          url("../../assets/wallpaper-3.jpg");
+        background-position: center center;
+        background-size: cover;
+      }
+    }
+  }
+
+  .bottom {
+    flex: 1;
+    display: flex;
+    .left {
+      cursor: pointer;
+      flex: 1;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../assets/wallpaper-4.jpg");
+      background-position: center center;
+      background-size: cover;
+
+      &:hover {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+          url("../../assets/wallpaper-4.jpg");
+        background-position: center center;
+        background-size: cover;
+      }
+    }
+
+    .right {
+      cursor: pointer;
+      flex: 1;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../assets/wallpaper-1.jpg");
+      background-position: center center;
+      background-size: cover;
+
+      &:hover {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+          url("../../assets/wallpaper-1.jpg");
+        background-position: center center;
+        background-size: cover;
+      }
+    }
+  }
+
+  .start-text {
+    width: 100%;
+    height: 100%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    h4 {
+      font-size: 30px;
+    }
+  }
+}
+
+#start-button {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  background-color: rgb(31, 147, 214);
+  top: 50%;
+  left: 50%;
+  transform: translate(-150px, -150px);
+  border-radius: 300px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all;
+
+  span {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  &:hover {
+    transform: translate(-150px, -150px) scale(1.1);
+  }
+}

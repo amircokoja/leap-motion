@@ -1,0 +1,15 @@
+#preview {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f4f6f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px;
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

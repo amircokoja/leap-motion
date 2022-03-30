@@ -1,0 +1,32 @@
+[
+  {
+    "id": "dep-1",
+    "name": "Department 1",
+    "description": "Description 1"
+  },
+  {
+    "id": "dep-2",
+    "name": "Department 2",
+    "description": "Description 2"
+  },
+  {
+    "id": "dep-3",
+    "name": "Department 3",
+    "description": "Description 3"
+  },
+  {
+    "id": "dep-4",
+    "name": "Department 4",
+    "description": "Description 4"
+  },
+  {
+    "id": "dep-5",
+    "name": "Department 5",
+    "description": "Description 5"
+  },
+  {
+    "id": "dep-6",
+    "name": "Department 6",
+    "description": "Description 6"
+  }
+]

@@ -1,0 +1,12 @@
+<div id="check-in">
+  <div class="check-in-input">
+    <input type="text" [(ngModel)]="value" name="value" maxlength="10" />
+  </div>
+
+  <div class="keyboard">
+    <app-keyboard
+      (onInputUpdate)="onInputUpdate($event)"
+      (onSubmit)="onSubmit()"
+    ></app-keyboard>
+  </div>
+</div>

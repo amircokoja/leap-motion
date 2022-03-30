@@ -1,0 +1,11 @@
+<div id="create-appointment">
+  <div class="row">
+    <div
+      *ngFor="let item of departments"
+      (click)="onDepartmentClick(item.id)"
+      class="item"
+    >
+      {{ item.name }}
+    </div>
+  </div>
+</div>
