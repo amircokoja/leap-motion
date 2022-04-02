@@ -21,6 +21,9 @@ import { CreateAppointmentComponent } from './create-appointment/create-appointm
 import { HistoryComponent } from './history/history.component';
 import { AppointmentSummaryComponent } from './components/appointment-summary/appointment-summary.component';
 import { PrintRequestSuccessComponent } from './components/print-request-success/print-request-success.component';
+import { LoadingBarComponent } from './components/loading-bar/loading-bar.component';
+import { CheckInConfirmationComponent } from './check-in-confirmation/check-in-confirmation.component';
+import { SuccessCheckInComponent } from './success-check-in/success-check-in.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,9 @@ import { PrintRequestSuccessComponent } from './components/print-request-success
     HistoryComponent,
     AppointmentSummaryComponent,
     PrintRequestSuccessComponent,
+    LoadingBarComponent,
+    CheckInConfirmationComponent,
+    SuccessCheckInComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
   providers: [],

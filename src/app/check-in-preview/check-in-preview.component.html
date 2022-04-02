@@ -1,15 +1,52 @@
-<div id="preview">
-  <div>
-    <h3>Hello,</h3>
-    <h3>Linda</h3>
-  </div>
-  <div>
-    <p>You have an appointment at 15:00 with doctor Chris Fernandes!</p>
-    <p>Do you want to create check in?</p>
+<div id="preview" class="bg-p">
+  <div class="loading-bar">
+    <app-loading-bar [steps]="2" [progress]="1"></app-loading-bar>
   </div>
 
-  <div class="buttons">
-    <button class="button" (click)="onNoClick()">No</button>
-    <button class="button" (click)="onYesClick()">Yes</button>
+  <div class="container">
+    <h1>Please select your appointment and review the details</h1>
+
+    <div class="items">
+      <div class="item" (click)="onItemClick()">
+        <div class="item-image">
+          <img src="../../assets/orthopedy.svg" alt="Orthopedy" />
+        </div>
+
+        <div class="all-details">
+          <div class="details">
+            <div class="clinic">
+              <p>March 21, 2022</p>
+              <h4>Orthopedy</h4>
+              <p>C Block Floor 2 Clinic 9</p>
+            </div>
+            <h5>Dr. Fatma Bulut</h5>
+          </div>
+          <div class="timing">
+            <div class="timing-item">
+              <div class="timing-img">
+                <img src="../../assets/clock.svg" alt="Clock" />
+              </div>
+              <p>10:30</p>
+            </div>
+            <div class="timing-item">
+              <div class="timing-img">
+                <img src="../../assets/people.svg" alt="Clock" />
+              </div>
+              <p>3 people in queue</p>
+            </div>
+            <div class="timing-item">
+              <div class="timing-img">
+                <img src="../../assets/time.svg" alt="Clock" />
+              </div>
+              <p>Your turn in 28 min</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="back-button" (click)="goBack()">
+    <img src="../../assets/back.svg" alt="Back button" />
   </div>
 </div>

@@ -20,4 +20,8 @@ export class CheckInComponent implements OnInit {
   onSubmit(): void {
     this.router.navigate(['/check-in-preview']);
   }
+
+  goBack(): void {
+    this.router.navigate(['/dashboard']);
+  }
 }

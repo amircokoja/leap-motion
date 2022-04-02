@@ -1,0 +1,26 @@
+#loading-bar {
+  width: 100vw;
+  background: #c4c4c4;
+  height: 67px;
+  position: relative;
+
+  .progress {
+    position: absolute;
+    left: 0;
+    height: 67px;
+    width: 30%;
+    background: #9db5b2;
+  }
+
+  .progress.full {
+    width: 100%;
+  }
+
+  .progress.one-third {
+    width: 33%;
+  }
+
+  .progress.two-thirds {
+    width: 66%;
+  }
+}

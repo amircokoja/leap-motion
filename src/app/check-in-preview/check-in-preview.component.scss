@@ -1,15 +1,118 @@
 #preview {
   height: 100vh;
   width: 100vw;
-  background-color: #f4f6f8;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 80px;
 
-  .buttons {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  .loading-bar {
+    padding-top: 64px;
+  }
+
+  .container {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    h1 {
+      margin-top: 64px;
+      margin-bottom: 67px;
+    }
+
+    .item {
+      padding: 48px 27px;
+      background: #ffffff;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 16px;
+      color: #3b413c;
+      display: flex;
+      width: 968px;
+      cursor: pointer;
+      margin: auto;
+
+      .item-image {
+        width: 176px;
+        height: 156px;
+        background: #019874;
+        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.16);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      p {
+        font-size: 24px;
+        margin-bottom: 0;
+      }
+
+      h4 {
+        font-weight: 700;
+        font-size: 36px;
+        margin-bottom: 0;
+      }
+
+      h5 {
+        font-weight: 700;
+        font-family: "Raleway", sans-serif;
+        margin-bottom: 0;
+        font-size: 32px;
+      }
+
+      .details {
+        text-align: left;
+        padding: 0 20px;
+      }
+
+      .clinic {
+        margin-bottom: 8px;
+      }
+
+      .all-details {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .timing {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .timing-item {
+        display: flex;
+
+        p {
+          font-weight: 500;
+          font-size: 24px;
+        }
+
+        .timing-img {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+          width: 20px;
+        }
+      }
+
+      &:hover {
+        background-color: #019874;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        color: white;
+
+        .item-image {
+          background: #fff;
+
+          img {
+            filter: invert(44%) sepia(26%) saturate(1928%) hue-rotate(122deg)
+              brightness(94%) contrast(99%);
+          }
+        }
+
+        .timing-img img {
+          filter: invert(99%) sepia(4%) saturate(2%) hue-rotate(113deg)
+            brightness(115%) contrast(100%);
+        }
+      }
+    }
   }
 }

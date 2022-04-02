@@ -1,7 +1,4 @@
 #keyboard {
-  width: 600px;
-  background-color: #282c2d;
-
   display: flex;
   flex-direction: column;
 
@@ -10,22 +7,30 @@
 
     .input {
       flex: 1;
-      background-color: #393b3d;
-      border-radius: 10px;
-      margin: 10px;
-      height: 100px;
+      height: 103px;
+      margin: 7px;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       cursor: pointer;
-      font-size: 28px;
+      font-size: 48px;
+      color: #3b413c;
+      border: 8px solid #9db5b2;
+      border-radius: 20px;
+      font-weight: bold;
     }
 
     .input:hover {
-      color: rgb(189, 189, 189);
-      background-color: #262a2e;
+      border-color: transparent;
+      background-color: #019874;
+      color: white;
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .submit {
+      background-color: #9db5b2;
+      color: white;
+      font-size: 32px;
     }
   }
 }
