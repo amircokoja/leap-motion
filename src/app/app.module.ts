@@ -24,6 +24,7 @@ import { PrintRequestSuccessComponent } from './components/print-request-success
 import { LoadingBarComponent } from './components/loading-bar/loading-bar.component';
 import { CheckInConfirmationComponent } from './check-in-confirmation/check-in-confirmation.component';
 import { SuccessCheckInComponent } from './success-check-in/success-check-in.component';
+import { ClinicSelectionComponent } from './clinic-selection/clinic-selection.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { SuccessCheckInComponent } from './success-check-in/success-check-in.com
     LoadingBarComponent,
     CheckInConfirmationComponent,
     SuccessCheckInComponent,
+    ClinicSelectionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
   providers: [],

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,11 +6,15 @@ import { Router } from '@angular/router';
   templateUrl: './success-check-in.component.html',
   styleUrls: ['./success-check-in.component.scss'],
 })
-export class SuccessCheckInComponent implements OnInit {
+export class SuccessCheckInComponent implements OnInit, OnDestroy {
   redirectIn = 10;
   intervalId: any;
 
   constructor(private router: Router) {}
+
+  ngOnDestroy(): void {
+    clearInterval(this.intervalId);
+  }
 
   ngOnInit(): void {
     this.intervalId = setInterval(() => {

@@ -7,15 +7,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./check-in-confirmation.component.scss'],
 })
 export class CheckInConfirmationComponent implements OnInit {
+  selected: number[] = [];
+
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
-  onItemClick(): void {
+  onNextClick(): void {
     this.router.navigate(['/success']);
   }
 
   goBack(): void {
     this.router.navigate(['/check-in-preview']);
+  }
+
+  onSelect(value: number): void {
+    const index = this.selected.indexOf(value);
+    if (index === -1) {
+      this.selected.push(value);
+    } else {
+      this.selected.splice(index, 1);
+    }
   }
 }

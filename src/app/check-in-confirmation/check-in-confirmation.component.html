@@ -1,25 +1,37 @@
 <div id="confirm" class="bg-p">
   <div class="loading-bar">
-    <app-loading-bar [steps]="2" [progress]="1"></app-loading-bar>
+    <app-loading-bar [steps]="3" [progress]="3"></app-loading-bar>
   </div>
 
   <div class="container">
     <h1>Please choose your confirmation preference</h1>
 
     <div class="select-box">
-      <div class="box" (click)="onItemClick()">
+      <div
+        [ngClass]="{ active: selected.includes(1) }"
+        class="box"
+        (click)="onSelect(1)"
+      >
         <div class="icon">
           <img src="../../assets/email.svg" alt="Email" />
         </div>
         <div class="box-text">Send me the queue details via email</div>
       </div>
-      <div class="box" (click)="onItemClick()">
+      <div
+        [ngClass]="{ active: selected.includes(2) }"
+        class="box"
+        (click)="onSelect(2)"
+      >
         <div class="icon">
           <img src="../../assets/message.svg" alt="Message" />
         </div>
         <div class="box-text">Send me the queue details via SMS</div>
       </div>
-      <div class="box" (click)="onItemClick()">
+      <div
+        [ngClass]="{ active: selected.includes(3) }"
+        class="box"
+        (click)="onSelect(3)"
+      >
         <div class="icon">
           <img src="../../assets/print.svg" alt="Print" />
         </div>
@@ -30,5 +42,15 @@
 
   <div id="back-button" (click)="goBack()">
     <img src="../../assets/back.svg" alt="Back button" />
+  </div>
+
+  <div id="next-button">
+    <button
+      (click)="onNextClick()"
+      [disabled]="selected.length === 0"
+      class="button-s"
+    >
+      Next
+    </button>
   </div>
 </div>

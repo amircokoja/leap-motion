@@ -9,16 +9,12 @@ export class LoadingBarComponent implements OnInit {
   @Input() steps: number = 1;
   @Input() progress: number = 0;
 
-  classValue = 'asd';
+  classValue = '';
 
   constructor() {}
 
   ngOnInit(): void {
-    console.log(this.steps);
-    console.log(this.progress);
-
-    if (this.steps === 3) {
-    }
+    this.generateClass();
   }
 
   generateClass(): void {
@@ -32,9 +28,9 @@ export class LoadingBarComponent implements OnInit {
 
     if (this.steps === 3) {
       if (this.progress === 1) {
-        this.classValue === 'one-third';
+        this.classValue = 'one-third';
       } else if (this.progress === 2) {
-        this.classValue === 'two-thirds';
+        this.classValue = 'two-thirds';
       }
     }
   }
