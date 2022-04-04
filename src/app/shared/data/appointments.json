@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1",
+    "date": "March 31, 2022",
+    "name": "Orthopedy",
+    "block": "C Block",
+    "floor": "Floor 2",
+    "clinic": "Clinic 9",
+    "doctor": "Dr. Fatma Bulut",
+    "time": "10:30",
+    "queue": "3 people in queue",
+    "yourTurn": "Your turn in 28 min",
+    "image": "orthopedy.svg"
+  },
+  {
+    "id": "2",
+    "date": "April 07, 2022",
+    "name": "Neurology",
+    "block": "A Block",
+    "floor": "1 Floor",
+    "clinic": "Clinic 3",
+    "doctor": "Dr. Ahmet Dursun",
+    "time": "08:30",
+    "queue": "No information",
+    "yourTurn": "No information",
+    "image": "orthopedy.svg"
+  }
+]
