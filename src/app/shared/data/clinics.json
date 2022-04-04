@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "name": "General Medicine",
+    "image": "general-medicine.svg"
+  },
+  {
+    "id": "2",
+    "name": "Internal Medicine",
+    "image": "internal-medicine.svg"
+  },
+  {
+    "id": "3",
+    "name": "Cardiology",
+    "image": "cardiology.svg"
+  },
+  {
+    "id": "4",
+    "name": "Hematology",
+    "image": "hematology.svg"
+  },
+  {
+    "id": "5",
+    "name": "Orthopedics",
+    "image": "orthopedics.svg"
+  },
+  {
+    "id": "6",
+    "name": "Pulmonology",
+    "image": "pulmonology.svg"
+  },
+  {
+    "id": "7",
+    "name": "Oncology",
+    "image": "oncology.svg"
+  },
+  {
+    "id": "8",
+    "name": "Neurology",
+    "image": "neurology.svg"
+  },
+  {
+    "id": "9",
+    "name": "Obstetrics and gynaecology",
+    "image": "obstetrics-and-gynaecology.svg"
+  },
+  {
+    "id": "10",
+    "name": "Pediatrics",
+    "image": "pediatrics.svg"
+  }
+]

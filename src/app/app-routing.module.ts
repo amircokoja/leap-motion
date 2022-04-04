@@ -4,6 +4,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { CheckInConfirmationComponent } from './check-in-confirmation/check-in-confirmation.component';
 import { CheckInPreviewComponent } from './check-in-preview/check-in-preview.component';
 import { CheckInComponent } from './check-in/check-in.component';
+import { ClinicSelectionComponent } from './clinic-selection/clinic-selection.component';
 import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DoctorsComponent } from './dashboard/doctors/doctors.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'history', component: HistoryComponent },
   { path: 'success', component: SuccessCheckInComponent },
+  { path: 'clinic-selection', component: ClinicSelectionComponent },
   { path: 'create-appointment', component: CreateAppointmentComponent },
   {
     path: 'dashboard',
