@@ -1,19 +1,13 @@
 <div id="dashboard" class="bg-p">
-  <!-- <div class="dashboard-buttons">
-    <button class="button" routerLink="/check-in">Check in</button>
-    <button class="button" (click)="onLoginNavigate('appointment')">
-      Create appointment
-    </button>
-    <button class="button" (click)="onLoginNavigate('login')">Login</button>
-  </div> -->
-
   <div class="dashboard-container">
     <h1>Welcome! How can I help you today?</h1>
     <div class="buttons">
       <button class="button-s" routerLink="/check-in">
         Check in to my appointment
       </button>
-      <button class="button-s">Make a new appointment</button>
+      <button class="button-s" routerLink="/clinic-selection">
+        Make a new appointment
+      </button>
       <button class="button-s">Login to my profile</button>
     </div>
   </div>

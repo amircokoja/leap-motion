@@ -7,8 +7,6 @@ import { StartComponent } from './start/start.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { MoreInfoComponent } from './more-info/more-info.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SearchComponent } from './dashboard/search/search.component';
-import { DoctorsComponent } from './dashboard/doctors/doctors.component';
 import { CheckInComponent } from './check-in/check-in.component';
 import { KeyboardComponent } from './components/keyboard/keyboard.component';
 import { FormsModule } from '@angular/forms';
@@ -17,9 +15,8 @@ import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CheckInSuccessComponent } from './components/check-in-success/check-in-success.component';
 import { LoginComponent } from './login/login.component';
 import { TextKeyboardComponent } from './components/text-keyboard/text-keyboard.component';
-import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
 import { HistoryComponent } from './history/history.component';
-import { AppointmentSummaryComponent } from './components/appointment-summary/appointment-summary.component';
+import { AppointmentSummaryComponent } from './appointment-summary/appointment-summary.component';
 import { PrintRequestSuccessComponent } from './components/print-request-success/print-request-success.component';
 import { LoadingBarComponent } from './components/loading-bar/loading-bar.component';
 import { CheckInConfirmationComponent } from './check-in-confirmation/check-in-confirmation.component';
@@ -33,15 +30,12 @@ import { ClinicSelectionComponent } from './clinic-selection/clinic-selection.co
     AboutUsComponent,
     MoreInfoComponent,
     DashboardComponent,
-    SearchComponent,
-    DoctorsComponent,
     CheckInComponent,
     KeyboardComponent,
     CheckInPreviewComponent,
     CheckInSuccessComponent,
     LoginComponent,
     TextKeyboardComponent,
-    CreateAppointmentComponent,
     HistoryComponent,
     AppointmentSummaryComponent,
     PrintRequestSuccessComponent,

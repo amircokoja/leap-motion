@@ -18,4 +18,8 @@ export class ClinicSelectionComponent implements OnInit {
   goBack(): void {
     this.router.navigate(['/start']);
   }
+
+  onItemClicked(): void {
+    this.router.navigate(['/appointment-summary']);
+  }
 }

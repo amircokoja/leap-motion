@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { AppointmentSummaryComponent } from './appointment-summary/appointment-summary.component';
 import { CheckInConfirmationComponent } from './check-in-confirmation/check-in-confirmation.component';
 import { CheckInPreviewComponent } from './check-in-preview/check-in-preview.component';
 import { CheckInComponent } from './check-in/check-in.component';
 import { ClinicSelectionComponent } from './clinic-selection/clinic-selection.component';
-import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DoctorsComponent } from './dashboard/doctors/doctors.component';
-import { SearchComponent } from './dashboard/search/search.component';
 import { HistoryComponent } from './history/history.component';
 import { LoginComponent } from './login/login.component';
 import { MoreInfoComponent } from './more-info/more-info.component';
@@ -27,15 +25,8 @@ const routes: Routes = [
   { path: 'history', component: HistoryComponent },
   { path: 'success', component: SuccessCheckInComponent },
   { path: 'clinic-selection', component: ClinicSelectionComponent },
-  { path: 'create-appointment', component: CreateAppointmentComponent },
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
-    children: [
-      { path: 'search', component: SearchComponent },
-      { path: 'doctors', component: DoctorsComponent },
-    ],
-  },
+  { path: 'appointment-summary', component: AppointmentSummaryComponent },
+  { path: 'dashboard', component: DashboardComponent },
 ];
 
 @NgModule({

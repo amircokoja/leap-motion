@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-appointment-summary',
@@ -8,12 +7,17 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./appointment-summary.component.scss'],
 })
 export class AppointmentSummaryComponent implements OnInit {
-  constructor(private router: Router, private activeModal: NgbActiveModal) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
-  onOkay(): void {
-    this.activeModal.close();
-    this.router.navigate(['/dashboard']);
+  goBack(): void {
+    this.router.navigate(['/clinic-selection']);
+  }
+
+  onPrintClicked(): void {
+    this.router.navigate(['/success'], {
+      queryParams: { type: 'appointment' },
+    });
   }
 }

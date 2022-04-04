@@ -1,0 +1,17 @@
+<div id="summary" class="bg-p">
+  <div class="loading-bar">
+    <app-loading-bar [steps]="3" [progress]="1"></app-loading-bar>
+  </div>
+
+  <div class="container">
+    <h1>Please review the details of your appointment</h1>
+  </div>
+
+  <div id="back-button" (click)="goBack()">
+    <img src="../../assets/back.svg" alt="Back button" />
+  </div>
+
+  <div id="next-button">
+    <button (click)="onPrintClicked()" class="button-s">Print</button>
+  </div>
+</div>

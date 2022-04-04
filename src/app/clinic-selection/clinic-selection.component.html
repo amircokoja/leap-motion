@@ -3,17 +3,13 @@
     <app-loading-bar [steps]="3" [progress]="1"></app-loading-bar>
   </div>
 
-  <!-- <div *ngFor="let clinic of clinics" class="item">
-      {{ clinic.name }}
-    </div> -->
-
   <div class="container">
     <h1>
       Let's check you in for your appointment.<br />Please, choose the clinic
     </h1>
 
     <div class="select-box">
-      <div *ngFor="let clinic of clinics" class="box">
+      <div *ngFor="let clinic of clinics" class="box" (click)="onItemClicked()">
         <div class="icon">
           <img src="../../assets/{{ clinic.image }}" [alt]="clinic.name" />
         </div>
