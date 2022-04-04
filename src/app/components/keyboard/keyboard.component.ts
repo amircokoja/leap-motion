@@ -26,6 +26,11 @@ export class KeyboardComponent implements OnInit {
   }
 
   handleSubmit(): void {
+    this.input = '';
     this.onSubmit.emit();
+  }
+
+  onResetKeyboard(): void {
+    this.input = '';
   }
 }

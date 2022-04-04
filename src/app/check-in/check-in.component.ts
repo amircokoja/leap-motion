@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
 })
 export class CheckInComponent implements OnInit {
   value = '';
+  type = EType.ID_NUMBER;
+  text = 'Please enter your ID number';
+  placeholder = 'ID number';
 
   constructor(private router: Router) {}
 
@@ -17,11 +20,23 @@ export class CheckInComponent implements OnInit {
     this.value = value;
   }
 
-  onSubmit(): void {
-    this.router.navigate(['/check-in-preview']);
-  }
-
   goBack(): void {
     this.router.navigate(['/dashboard']);
   }
+
+  onSubmit(): void {
+    if (this.type === EType.ID_NUMBER) {
+      this.text = 'You will receive a verification passcode at +90******1234';
+      this.value = '';
+      this.placeholder = 'Enter the 6-digit code here';
+      this.type = EType.VERIFICATION;
+    } else {
+      this.router.navigate(['/check-in-preview']);
+    }
+  }
+}
+
+enum EType {
+  ID_NUMBER,
+  VERIFICATION,
 }
