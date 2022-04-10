@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import data from '../shared/data/clinics.json';
-import { IClinic } from '../shared/data/data.model';
+import data from '../../shared/data/clinics.json';
+import { IClinic } from '../../shared/data/data.model';
 
 @Component({
   selector: 'app-clinic-selection',
@@ -20,6 +20,8 @@ export class ClinicSelectionComponent implements OnInit {
   }
 
   onItemClicked(): void {
-    this.router.navigate(['/appointment-summary']);
+    this.router.navigate(['/login'], {
+      queryParams: { type: 'create-appointment' },
+    });
   }
 }

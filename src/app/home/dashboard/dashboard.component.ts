@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TYPE_CREATE_APPOINTMENT, TYPE_LOGIN } from '../shared/data/constants';
+import {
+  TYPE_CREATE_APPOINTMENT,
+  TYPE_LOGIN,
+} from '../../shared/data/constants';
 
 @Component({
   selector: 'app-dashboard',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import data from '../shared/data/appointments.json';
-import { IAppointment } from '../shared/data/data.model';
+import data from '../../shared/data/appointments.json';
+import { IAppointment } from '../../shared/data/data.model';
 
 @Component({
   selector: 'app-check-in-preview',
@@ -24,7 +24,7 @@ export class CheckInPreviewComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(['/check-in']);
+    this.router.navigate(['/login']);
   }
 
   onNextClick(): void {
