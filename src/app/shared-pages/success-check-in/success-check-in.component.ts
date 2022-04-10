@@ -49,11 +49,7 @@ export class SuccessCheckInComponent implements OnInit, OnDestroy {
     }, 1000);
 
     const type = this.route.snapshot.queryParams.type;
-
-    console.log(type);
-
     const obj = this.data.find((a) => a.type === type);
-    console.log(obj);
 
     if (obj) {
       this.title1 = obj.title1;

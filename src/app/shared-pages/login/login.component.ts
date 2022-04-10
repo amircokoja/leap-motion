@@ -17,14 +17,26 @@ export class LoginComponent implements OnInit {
     this.loginType = this.route.snapshot.queryParams.type;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const perference = this.route.snapshot.queryParams.perference;
+    if (perference === 'passport') {
+      this.text = 'Please enter ID of your passport';
+      this.placeholder = 'Passport';
+    }
+  }
 
   onInputUpdate(value: string): void {
     this.value = value;
   }
 
   goBack(): void {
-    this.router.navigate(['/dashboard']);
+    if (this.loginType === 'appointment') {
+      this.router.navigate(['/clinic-selection']);
+    } else if (this.loginType === 'login') {
+      this.router.navigate(['/perference']);
+    } else {
+      this.router.navigate(['/dashboard']);
+    }
   }
 
   onSubmit(): void {

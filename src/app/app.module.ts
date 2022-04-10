@@ -19,6 +19,8 @@ import { ClinicSelectionComponent } from './appointment/clinic-selection/clinic-
 import { NeedHelpComponent } from './home/need-help/need-help.component';
 import { FaqComponent } from './home/faq/faq.component';
 import { HeaderComponent } from './components/header/header.component';
+import { LoginPerferenceComponent } from './login/login-perference/login-perference.component';
+import { ProfileComponent } from './login/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { HeaderComponent } from './components/header/header.component';
     NeedHelpComponent,
     FaqComponent,
     HeaderComponent,
+    LoginPerferenceComponent,
+    ProfileComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
   providers: [],

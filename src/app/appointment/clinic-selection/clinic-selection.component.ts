@@ -16,7 +16,7 @@ export class ClinicSelectionComponent implements OnInit {
   ngOnInit(): void {}
 
   goBack(): void {
-    this.router.navigate(['/start']);
+    this.router.navigate(['/dashboard']);
   }
 
   onItemClicked(): void {

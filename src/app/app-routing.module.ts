@@ -11,6 +11,8 @@ import { StartComponent } from './home/start/start.component';
 import { SuccessCheckInComponent } from './shared-pages/success-check-in/success-check-in.component';
 import { FaqComponent } from './home/faq/faq.component';
 import { NeedHelpComponent } from './home/need-help/need-help.component';
+import { LoginPerferenceComponent } from './login/login-perference/login-perference.component';
+import { ProfileComponent } from './login/profile/profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'start', pathMatch: 'full' },
@@ -25,6 +27,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'need-help', component: NeedHelpComponent },
+  { path: 'perference', component: LoginPerferenceComponent },
+  { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({
