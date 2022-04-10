@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,16 +11,10 @@ export class LoginComponent implements OnInit {
   type = EType.ID_NUMBER;
   text = 'Please enter your ID number';
   placeholder = 'ID number';
-  redirectionType: string | undefined = undefined;
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
-    // check from which page user came
-    // if redirecionType has value, user came from clinic selection
-    // if redirectionType does not have value, user came from check in
-    this.redirectionType = this.route.snapshot.queryParams.type;
-  }
+  ngOnInit(): void {}
 
   onInputUpdate(value: string): void {
     this.value = value;
@@ -37,11 +31,7 @@ export class LoginComponent implements OnInit {
       this.placeholder = 'Enter the 6-digit code here';
       this.type = EType.VERIFICATION;
     } else {
-      if (this.redirectionType === 'create-appointment') {
-        this.router.navigate(['/appointment-summary']);
-      } else {
-        this.router.navigate(['/check-in-preview']);
-      }
+      this.router.navigate(['/check-in-preview']);
     }
   }
 }
