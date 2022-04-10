@@ -23,3 +23,14 @@ export interface IAppointment {
   yourTurn: string;
   image: string;
 }
+
+export interface IProfileAppointment {
+  date: string;
+  time: string;
+  clinic: string;
+  image: string;
+  doctor: string;
+  location: string;
+  queue: string;
+  yourTurn: string;
+}

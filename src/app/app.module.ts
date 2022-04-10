@@ -21,6 +21,7 @@ import { FaqComponent } from './home/faq/faq.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginPerferenceComponent } from './login/login-perference/login-perference.component';
 import { ProfileComponent } from './login/profile/profile.component';
+import { ProfileAppointmentComponent } from './login/profile/components/profile-appointment/profile-appointment.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ProfileComponent } from './login/profile/profile.component';
     HeaderComponent,
     LoginPerferenceComponent,
     ProfileComponent,
+    ProfileAppointmentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
   providers: [],

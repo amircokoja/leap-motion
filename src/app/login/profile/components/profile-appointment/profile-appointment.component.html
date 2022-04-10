@@ -1,0 +1,40 @@
+<div class="item">
+  <div class="item-image">
+    <img
+      src="../../assets/{{ appointment?.image }}"
+      [alt]="appointment?.clinic"
+    />
+  </div>
+
+  <div class="all-details">
+    <div class="details">
+      <div class="clinic">
+        <h4>{{ appointment?.date }}</h4>
+        <h4>{{ appointment?.time }}</h4>
+      </div>
+      <p class="bold">{{ appointment?.clinic }}</p>
+      <p>{{ appointment?.doctor }}</p>
+    </div>
+
+    <div class="timing">
+      <div class="timing-item">
+        <div class="timing-img">
+          <img src="../../assets/location.svg" alt="Location" />
+        </div>
+        <p class="small">{{ appointment?.location }}</p>
+      </div>
+      <div class="timing-item">
+        <div class="timing-img">
+          <img src="../../assets/people.svg" alt="Clock" />
+        </div>
+        <p class="small">{{ appointment?.queue }}</p>
+      </div>
+      <div class="timing-item">
+        <div class="timing-img">
+          <img src="../../assets/time.svg" alt="Clock" />
+        </div>
+        <p class="small">{{ appointment?.yourTurn }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,155 @@
-<p>profile works!</p>
+<div id="profile" class="bg-p">
+  <div class="profile-header">
+    <h1>Patient profile</h1>
+    <div (click)="onClose()">
+      <img src="../../../assets/close.svg" alt="Close" />
+    </div>
+  </div>
+
+  <div class="profile-container">
+    <div class="left">
+      <div class="patient-details">
+        <div class="user-image">
+          <div><img src="../../../assets/user-profile.svg" alt="User" /></div>
+          <div class="private-data">
+            <p>***ET ***LU</p>
+            <p>ID: ***336</p>
+          </div>
+        </div>
+        <div class="user-details">
+          <div class="group">
+            <div class="item">
+              <p>Age</p>
+              <p class="value">36</p>
+            </div>
+            <div class="item">
+              <p>Blood Type</p>
+              <p class="value">A+</p>
+            </div>
+          </div>
+          <div class="group">
+            <div class="item">
+              <p>Height</p>
+              <p class="value">186</p>
+            </div>
+            <div class="item">
+              <p>Weight</p>
+              <p class="value">A+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <button class="button-s">Check in to my appointment</button>
+        <button class="button-s">Make a new appointment</button>
+      </div>
+    </div>
+
+    <div class="right">
+      <h3 class="title">My appointments</h3>
+      <div class="history-buttons">
+        <button
+          [ngClass]="{ active: !historyActive }"
+          class="button-s"
+          (click)="changeActiveStatus(false)"
+        >
+          Upcoming
+        </button>
+        <button
+          [ngClass]="{ active: historyActive }"
+          class="button-s"
+          (click)="changeActiveStatus(true)"
+        >
+          History
+        </button>
+      </div>
+      <div>
+        <div *ngFor="let item of appointments" class="appointment-item">
+          <app-profile-appointment
+            [appointment]="item"
+          ></app-profile-appointment>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="boxes">
+    <div class="white-box">
+      <h3>Notifications</h3>
+      <div class="box-item">
+        <p>06.01.2022</p>
+        <div>
+          <p>Phenobarbital tablets, 30 mg</p>
+          <p>2 times a day after the meal</p>
+        </div>
+      </div>
+      <div class="box-item">
+        <p>06.01.2022</p>
+        <div>
+          <p>Phenobarbital tablets, 30 mg</p>
+          <p>2 times a day after the meal</p>
+        </div>
+      </div>
+    </div>
+    <div class="white-box central">
+      <h3>Prescriptions</h3>
+      <div class="box-item">
+        <p>06.01.2022</p>
+        <div>
+          <p>Phenobarbital tablets, 30 mg</p>
+          <p>2 times a day after the meal</p>
+        </div>
+      </div>
+      <div class="box-item">
+        <p>06.01.2022</p>
+        <div>
+          <p>Phenobarbital tablets, 30 mg</p>
+          <p>2 times a day after the meal</p>
+        </div>
+      </div>
+    </div>
+    <div class="white-box">
+      <h3>Health records</h3>
+      <div class="record">
+        <div>
+          <img src="../../../assets/pdf.svg" alt="Pdf" />
+        </div>
+        <p>21.01.2022. Lab results.pdf</p>
+        <div class="export">
+          <img
+            (click)="onExport()"
+            src="../../../assets/export.svg"
+            alt="Export"
+          />
+        </div>
+      </div>
+      <div class="record">
+        <div>
+          <img src="../../../assets/pdf.svg" alt="Pdf" />
+        </div>
+        <p>21.01.2022. Lab results.pdf</p>
+        <div class="export">
+          <img
+            (click)="onExport()"
+            src="../../../assets/export.svg"
+            alt="Export"
+          />
+        </div>
+      </div>
+      <div class="record">
+        <div>
+          <img src="../../../assets/pdf.svg" alt="Pdf" />
+        </div>
+        <p>21.01.2022. Lab results.pdf</p>
+        <div class="export">
+          <img
+            (click)="onExport()"
+            src="../../../assets/export.svg"
+            alt="Export"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

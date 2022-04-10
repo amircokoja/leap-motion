@@ -1,0 +1,22 @@
+[
+  {
+    "date": "November 07, 2022",
+    "time": "08:30",
+    "clinic": "Neurology",
+    "image": "neurology.svg",
+    "doctor": "Dr. Ahmet Dursun",
+    "location": "A Block Floor 1 Clinic 3",
+    "queue": "No information",
+    "yourTurn": "No information"
+  },
+  {
+    "date": "Decembar 12, 2022",
+    "time": "08:30",
+    "clinic": "Neurology",
+    "image": "neurology.svg",
+    "doctor": "Dr. Ahmet Dursun",
+    "location": "A Block Floor 1 Clinic 3",
+    "queue": "No information",
+    "yourTurn": "No information"
+  }
+]

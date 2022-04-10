@@ -49,8 +49,7 @@ export class LoginComponent implements OnInit {
       if (this.loginType === 'appointment') {
         this.router.navigate(['/appointment-summary']);
       } else if (this.loginType === 'login') {
-        // redirect to user details
-        this.router.navigate(['/check-in-preview']);
+        this.router.navigate(['/profile']);
       } else {
         this.router.navigate(['/check-in-preview']);
       }
