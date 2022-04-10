@@ -9,8 +9,28 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class SuccessCheckInComponent implements OnInit, OnDestroy {
   redirectIn = 10;
   intervalId: any;
-  title1 = 'You have successfully checked in.';
-  title2 = 'Please be on time for your appointment.';
+  title1: string = 'You have successfully checked in.';
+  title2: string = 'Please be on time for your appointment.';
+
+  data = [
+    {
+      type: 'check-in',
+      title1: 'You have successfully checked in.',
+      title2: 'Please be on time for your appointment.',
+    },
+    {
+      type: 'appointment',
+      title1: 'You have successfully checked in.',
+      title2:
+        'Please proceed to the reception desk with your printed slip to finish booking your appointment.',
+    },
+    {
+      type: 'login',
+      title1:
+        'An email with your requested PDF has been sent to your email address.',
+      title2: '',
+    },
+  ];
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
@@ -30,9 +50,14 @@ export class SuccessCheckInComponent implements OnInit, OnDestroy {
 
     const type = this.route.snapshot.queryParams.type;
 
-    if (type) {
-      this.title1 = 'You have successfully checked in.';
-      this.title2 = 'Please take your printed slip and follow the procedure.';
+    console.log(type);
+
+    const obj = this.data.find((a) => a.type === type);
+    console.log(obj);
+
+    if (obj) {
+      this.title1 = obj.title1;
+      this.title2 = obj.title2;
     }
   }
 }

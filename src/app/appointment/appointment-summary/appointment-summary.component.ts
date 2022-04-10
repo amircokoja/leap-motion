@@ -15,7 +15,7 @@ export class AppointmentSummaryComponent implements OnInit {
     this.router.navigate(['/clinic-selection']);
   }
 
-  onPrintClicked(): void {
+  onConfirm(): void {
     this.router.navigate(['/success'], {
       queryParams: { type: 'appointment' },
     });

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,8 +11,11 @@ export class LoginComponent implements OnInit {
   type = EType.ID_NUMBER;
   text = 'Please enter your ID number';
   placeholder = 'ID number';
+  loginType = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute) {
+    this.loginType = this.route.snapshot.queryParams.type;
+  }
 
   ngOnInit(): void {}
 
@@ -31,7 +34,14 @@ export class LoginComponent implements OnInit {
       this.placeholder = 'Enter the 6-digit code here';
       this.type = EType.VERIFICATION;
     } else {
-      this.router.navigate(['/check-in-preview']);
+      if (this.loginType === 'appointment') {
+        this.router.navigate(['/appointment-summary']);
+      } else if (this.loginType === 'login') {
+        // redirect to user details
+        this.router.navigate(['/check-in-preview']);
+      } else {
+        this.router.navigate(['/check-in-preview']);
+      }
     }
   }
 }

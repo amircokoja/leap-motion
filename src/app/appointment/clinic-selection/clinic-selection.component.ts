@@ -20,6 +20,6 @@ export class ClinicSelectionComponent implements OnInit {
   }
 
   onItemClicked(): void {
-    this.router.navigate(['/appointment-summary']);
+    this.router.navigate(['/login'], { queryParams: { type: 'appointment' } });
   }
 }

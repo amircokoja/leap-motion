@@ -2,13 +2,23 @@
   <div class="dashboard-container">
     <h1>Welcome! How can I help you today?</h1>
     <div class="buttons">
-      <button class="button-s" routerLink="/login">
+      <button
+        class="button-s"
+        [routerLink]="['/login']"
+        [queryParams]="{ type: 'check-in' }"
+      >
         Check in to my appointment
       </button>
       <button class="button-s" routerLink="/clinic-selection">
         Make a new appointment
       </button>
-      <button class="button-s" routerLink="/login">Login to my profile</button>
+      <button
+        class="button-s"
+        [routerLink]="['/login']"
+        [queryParams]="{ type: 'login' }"
+      >
+        Login to my profile
+      </button>
     </div>
   </div>
 

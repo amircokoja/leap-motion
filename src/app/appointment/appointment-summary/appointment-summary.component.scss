@@ -13,4 +13,55 @@
       margin-bottom: 67px;
     }
   }
+
+  .summary {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 46px;
+    display: flex;
+  }
+
+  .image-container {
+    height: 156px;
+    width: 176px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #019874;
+    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+  }
+
+  .summary-details {
+    flex: 1;
+    text-align: left;
+    padding-left: 40px;
+
+    h2 {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    p.details {
+      font-size: 32px;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 64px;
+    }
+
+    .no-margin {
+      margin: 0;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+  }
 }

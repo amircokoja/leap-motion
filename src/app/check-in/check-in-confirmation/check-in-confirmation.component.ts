@@ -14,7 +14,7 @@ export class CheckInConfirmationComponent implements OnInit {
   ngOnInit(): void {}
 
   onNextClick(): void {
-    this.router.navigate(['/success']);
+    this.router.navigate(['/success'], { queryParams: { type: 'check-in' } });
   }
 
   goBack(): void {
