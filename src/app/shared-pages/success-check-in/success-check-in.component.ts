@@ -39,16 +39,22 @@ export class SuccessCheckInComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    const type = this.route.snapshot.queryParams.type;
+
     this.intervalId = setInterval(() => {
       if (this.redirectIn === 0) {
         clearInterval(this.intervalId);
-        this.router.navigate(['/start']);
+
+        if (type === 'login') {
+          this.router.navigate(['/profile']);
+        } else {
+          this.router.navigate(['/start']);
+        }
       } else {
         this.redirectIn--;
       }
     }, 1000);
 
-    const type = this.route.snapshot.queryParams.type;
     const obj = this.data.find((a) => a.type === type);
 
     if (obj) {
